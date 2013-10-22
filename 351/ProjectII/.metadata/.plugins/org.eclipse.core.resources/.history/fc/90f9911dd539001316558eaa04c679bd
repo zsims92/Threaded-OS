@@ -1,0 +1,10 @@
+/*.section .exceptions.exit.user, "xa"
+*/
+.include "scheduler_asm.h"
+
+_MyThread:
+	addi	r16, r15, 0
+	addi	r4, r0, 5
+	movia	r17, global_flag
+	stw		r16, (r17)
+	call 	mythread

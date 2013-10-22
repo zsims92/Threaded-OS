@@ -1,0 +1,17 @@
+.include "scheduler_asm.h"
+.section .exceptions.exit.user, "xa"
+.extern int global_flag
+
+_MyThread:
+	movia	r9, global_flag
+	ldw		r10, (r9)
+	beq		r10, r0, _Skip
+	addi	r11, r0, 0
+	addi	r10, r0, 5
+	stw		r11, (r9)
+	call 	mythread_scheduler
+	movia 	r6, mythread
+	stw 	r6, 72(sp)
+	stw		r4, 20(sp)
+
+_Skip:

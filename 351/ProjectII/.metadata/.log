@@ -1,0 +1,712 @@
+!SESSION 2013-10-18 19:41:25.574 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-10-18 19:43:13.462
+!MESSAGE Indexed 'OS_Thread_bsp' (81 sources, 60 headers) in 0.98 sec: 950 declarations; 2,320 references; 117 unresolved inclusions; 5 syntax errors; 199 unresolved names (5.74%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-10-18 19:43:46.588
+!MESSAGE Indexed 'OSThread' (0 sources, 13 headers) in 0.02 sec: 0 declarations; 0 references; 13 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.ui 4 0 2013-10-18 19:46:36.785
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.setConnectionChoice(SystemConsoleConnectionModel.java:1214)
+	at com.altera.sbtgui.launch.ConfigurationUtils.syncModelToLaunchConfiguration(ConfigurationUtils.java:207)
+	at com.altera.sbtgui.launch.hardware.ui.ConnectionTab.initializeFrom(ConnectionTab.java:54)
+	at org.eclipse.debug.ui.AbstractLaunchConfigurationTab.activated(AbstractLaunchConfigurationTab.java:365)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer.handleTabSelected(LaunchConfigurationTabGroupViewer.java:1314)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationTabGroupViewer$6.widgetSelected(LaunchConfigurationTabGroupViewer.java:369)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:234)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1062)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:774)
+	at org.eclipse.swt.custom.CTabFolder.setSelection(CTabFolder.java:2743)
+	at org.eclipse.swt.custom.CTabFolder.onMouse(CTabFolder.java:1429)
+	at org.eclipse.swt.custom.CTabFolder$1.handleEvent(CTabFolder.java:257)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4066)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:825)
+	at org.eclipse.jface.window.Window.open(Window.java:801)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsDialog.open(LaunchConfigurationsDialog.java:1133)
+	at org.eclipse.debug.ui.DebugUITools$1.run(DebugUITools.java:398)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:406)
+	at org.eclipse.debug.ui.DebugUITools.openLaunchConfigurationDialogOnGroup(DebugUITools.java:340)
+	at org.eclipse.debug.ui.actions.OpenLaunchDialogAction.run(OpenLaunchDialogAction.java:81)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:584)
+	at org.eclipse.jface.action.ActionContributionItem.access$2(ActionContributionItem.java:501)
+	at org.eclipse.jface.action.ActionContributionItem$5.handleEvent(ActionContributionItem.java:411)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4066)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3657)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2640)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2604)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2438)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:671)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:664)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:115)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1407)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1383)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-18 19:47:20.527
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-18 19:47:31.479
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-18 19:48:35.052
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-18 19:48:44.010
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY org.eclipse.ui 4 4 2013-10-18 19:49:07.116
+!MESSAGE Exception in org.eclipse.ui.internal.PageLayout.stackView: org.eclipse.ui.PartInitException: Could not create view: org.eclipse.cdt.debug.ui.DisassemblyView
+
+!ENTRY org.eclipse.ui 4 4 2013-10-18 19:49:07.116
+!MESSAGE Exception in org.eclipse.ui.internal.PageLayout.stackView: org.eclipse.ui.PartInitException: Could not create view: org.eclipse.cdt.debug.ui.DisassemblyView
+!STACK 1
+org.eclipse.ui.PartInitException: Could not create view: org.eclipse.cdt.debug.ui.DisassemblyView
+	at org.eclipse.ui.internal.ViewFactory.createView(ViewFactory.java:158)
+	at org.eclipse.ui.internal.LayoutHelper.createView(LayoutHelper.java:162)
+	at org.eclipse.ui.internal.PageLayout.createView(PageLayout.java:543)
+	at org.eclipse.ui.internal.PageLayout.stackView(PageLayout.java:852)
+	at org.eclipse.ui.internal.registry.PerspectiveExtensionReader.processView(PerspectiveExtensionReader.java:270)
+	at org.eclipse.ui.internal.registry.PerspectiveExtensionReader.processExtension(PerspectiveExtensionReader.java:118)
+	at org.eclipse.ui.internal.registry.PerspectiveExtensionReader.readElement(PerspectiveExtensionReader.java:355)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElements(RegistryReader.java:144)
+	at org.eclipse.ui.internal.registry.RegistryReader.readExtension(RegistryReader.java:155)
+	at org.eclipse.ui.internal.registry.RegistryReader.readRegistry(RegistryReader.java:176)
+	at org.eclipse.ui.internal.registry.PerspectiveExtensionReader.extendLayout(PerspectiveExtensionReader.java:82)
+	at org.eclipse.ui.internal.Perspective.loadPredefinedPersp(Perspective.java:818)
+	at org.eclipse.ui.internal.Perspective.createPresentation(Perspective.java:270)
+	at org.eclipse.ui.internal.Perspective.<init>(Perspective.java:156)
+	at org.eclipse.ui.internal.tweaklets.Workbench3xImplementation.createPerspective(Workbench3xImplementation.java:55)
+	at org.eclipse.ui.internal.WorkbenchPage.createPerspective(WorkbenchPage.java:1672)
+	at org.eclipse.ui.internal.WorkbenchPage.busySetPerspective(WorkbenchPage.java:1034)
+	at org.eclipse.ui.internal.WorkbenchPage.access$16(WorkbenchPage.java:1025)
+	at org.eclipse.ui.internal.WorkbenchPage$19.run(WorkbenchPage.java:3715)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.setPerspective(WorkbenchPage.java:3713)
+	at org.eclipse.ui.internal.Workbench.showPerspective(Workbench.java:2814)
+	at org.eclipse.debug.internal.ui.launchConfigurations.PerspectiveManager.switchToPerspective(PerspectiveManager.java:351)
+	at org.eclipse.debug.internal.ui.launchConfigurations.PerspectiveManager$4.run(PerspectiveManager.java:439)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4041)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3660)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2640)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2604)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2438)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:671)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:664)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:115)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:369)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:619)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:574)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1407)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1383)
+!SUBENTRY 1 org.eclipse.ui 4 0 2013-10-18 19:49:07.116
+!MESSAGE Could not create view: org.eclipse.cdt.debug.ui.DisassemblyView
+!SESSION 2013-10-20 15:50:31.369 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-10-20 15:52:44.212
+!MESSAGE The system console model is invalid. Cannot launch.
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-10-20 16:06:20.577
+!MESSAGE The system console model is invalid. Cannot launch.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 16:06:51.509
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 16:06:59.173
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY org.eclipse.cdt.debug.mi.core 4 42 2013-10-20 16:07:55.646
+!MESSAGE Internal Error
+!STACK 0
+org.eclipse.cdt.debug.mi.core.cdi.MI2CDIException: Inferior terminated[]
+	at org.eclipse.cdt.debug.mi.core.cdi.SharedLibraryManager.getMIShareds(SharedLibraryManager.java:123)
+	at org.eclipse.cdt.debug.mi.core.cdi.SharedLibraryManager.updateState(SharedLibraryManager.java:188)
+	at org.eclipse.cdt.debug.mi.core.cdi.SharedLibraryManager.update(SharedLibraryManager.java:136)
+	at org.eclipse.cdt.debug.mi.core.cdi.EventManager.processSuspendedEvent(EventManager.java:326)
+	at org.eclipse.cdt.debug.mi.core.cdi.EventManager.update(EventManager.java:100)
+	at java.util.Observable.notifyObservers(Unknown Source)
+	at org.eclipse.cdt.debug.mi.core.MISession.notifyObservers(MISession.java:791)
+	at org.eclipse.cdt.debug.mi.core.EventThread.run(EventThread.java:46)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 16:08:03.863
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 16:08:09.131
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 16:37:26.504
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 16:37:31.750
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 16:38:44.783
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 16:38:50.066
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 16:59:47.292
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 16:59:52.580
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:00:49.503
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:00:54.787
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:01:58.866
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:02:04.016
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:05:32.382
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:05:36.347
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:05:39.776
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:06:28.998
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:06:32.395
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:07:48.328
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:07:51.951
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:09:06.911
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:09:10.731
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:09:33.329
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:09:35.695
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:09:41.092
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:10:07.545
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:10:12.695
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:12:43.938
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:12:47.376
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:13:35.885
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:13:40.596
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:15:37.111
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:15:41.079
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:15:46.353
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:21:48.827
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:21:52.868
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:21:58.317
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:24:24.085
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:24:28.071
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:24:33.326
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:25:37.661
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:25:41.645
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:25:46.852
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:27:09.495
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:27:13.557
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:27:19.868
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:32:07.242
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:32:11.223
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:32:16.460
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:33:18.870
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:33:22.856
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:33:29.247
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:34:30.463
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:34:35.648
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:37:26.819
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:37:29.208
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:37:34.427
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:40:22.690
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:40:28.072
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:54:00.359
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 17:54:05.574
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 18:08:19.453
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-20 18:08:24.885
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+!SESSION 2013-10-21 11:30:33.735 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 4 0 2013-10-21 12:06:34.936
+!MESSAGE The system console model is invalid. Cannot launch.
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:07:01.806
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:07:09.572
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:08:38.532
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:08:43.730
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:10:50.755
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:10:54.756
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:10:59.950
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:17:08.680
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:17:12.952
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:17:18.147
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:25:56.056
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:25:59.986
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:26:05.399
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:27:15.014
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:27:18.895
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:27:24.088
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:36:09.483
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:36:13.328
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:36:18.579
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:44:35.986
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:44:40.095
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:44:45.371
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:46:42.667
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:46:47.941
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:48:02.197
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:48:06.258
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 12:48:11.527
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:01:22.700
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:01:28.317
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:09:18.565
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:09:22.698
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:09:28.858
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:14:44.248
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:14:48.279
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:14:53.603
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:15:53.662
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:15:58.910
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:16:12.626
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:16:17.801
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:20:25.898
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:20:29.921
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:20:35.418
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:24:17.156
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:24:20.577
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:24:49.128
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:24:51.543
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:24:55.761
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:25:32.028
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:25:37.337
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:27:21.765
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:27:25.777
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:27:30.941
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:29:37.372
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:29:41.413
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:29:46.721
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:32:14.101
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:32:18.179
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:32:25.179
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:33:45.001
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 13:33:50.526
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 14:37:16.371
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 14:37:23.300
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 14:47:17.532
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 14:47:21.575
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 14:47:26.352
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 14:49:07.336
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 14:49:12.284
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 14:51:57.978
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 14:52:02.801
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 14:57:45.520
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 14:57:49.299
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 14:57:54.450
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:00:23.369
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:00:27.085
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:00:31.955
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:02:50.798
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:02:54.702
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:03:00.056
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:06:05.854
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:06:09.616
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:06:14.237
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:07:28.529
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:07:33.509
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:14:33.090
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:14:37.010
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:14:42.114
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:15:41.993
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:15:46.723
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:22:55.460
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:23:01.267
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:23:06.106
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:23:59.839
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:24:04.772
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:24:15.709
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:24:19.612
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:24:22.843
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:24:38.431
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:24:43.332
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:28:32.157
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:28:35.938
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:28:39.027
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:31:09.805
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:31:11.989
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:31:16.578
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:33:34.906
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:33:38.607
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:33:43.461
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:34:55.145
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:34:58.878
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:35:03.857
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:36:19.488
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:36:25.358
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --sidp=0x10002020 --timestamp=1305842390 /cygdrive/d/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/OSThread.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2013-10-21 15:36:30.228
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --tcpport=auto --sidp=0x10002020 --timestamp=1305842390]
