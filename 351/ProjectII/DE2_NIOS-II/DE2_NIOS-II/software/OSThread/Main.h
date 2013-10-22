@@ -8,11 +8,15 @@
 #ifndef MAIN_H_
 #define MAIN_H_
 
-#define NUM_THREADS 1
+#define NUM_THREADS 8
 //Defined a macro to calculate the time in seconds
 #define ALARMTICKS(x) ((alt_ticks_per_second()*(x))/10)
 //MAX value to wait before normal OS operation
 #define MAX 100000
+// disable an interrupt
+
+#define DISABLE_INTERRUPTS() { asm("wrctl status, zero"); }
+#define ENABLE_INTERRUPTS() { asm("movi et, 1");asm("wrctl status, et");}
 
 int runnable_threads;
 static alt_alarm alarm;
@@ -31,8 +35,5 @@ typedef struct{
 	int* stack;
 	int* context;  //Should be 7 registers
 } TCB;
-
-TCB threads[NUM_THREADS];
-TCB* currThread;
 
 #endif /* MAIN_H_ */

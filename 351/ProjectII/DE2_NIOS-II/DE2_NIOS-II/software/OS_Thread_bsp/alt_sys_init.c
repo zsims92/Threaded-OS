@@ -2,9 +2,9 @@
  * alt_sys_init.c - HAL initialization source
  *
  * Machine generated for CPU 'CPU' in SOPC Builder design 'nios_system'
- * SOPC Builder design path: D:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/nios_system.sopcinfo
+ * SOPC Builder design path: C:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/nios_system.sopcinfo
  *
- * Generated: Fri Oct 18 19:43:11 CDT 2013
+ * Generated: Tue Oct 22 13:09:48 CDT 2013
  */
 
 /*
@@ -62,6 +62,8 @@
 #include "altera_avalon_jtag_uart.h"
 #include "altera_avalon_sysid.h"
 #include "altera_avalon_timer.h"
+#include "altera_up_avalon_parallel_port.h"
+#include "altera_up_avalon_rs232.h"
 
 /*
  * Allocate the device storage
@@ -71,6 +73,15 @@ ALTERA_NIOS2_IRQ_INSTANCE ( CPU, CPU);
 ALTERA_AVALON_JTAG_UART_INSTANCE ( JTAG_UART, JTAG_UART);
 ALTERA_AVALON_SYSID_INSTANCE ( SYSID, sysid);
 ALTERA_AVALON_TIMER_INSTANCE ( INTERVAL_TIMER, Interval_timer);
+ALTERA_UP_AVALON_PARALLEL_PORT_INSTANCE ( EXPANSION_JP1, Expansion_JP1);
+ALTERA_UP_AVALON_PARALLEL_PORT_INSTANCE ( EXPANSION_JP2, Expansion_JP2);
+ALTERA_UP_AVALON_PARALLEL_PORT_INSTANCE ( GREEN_LEDS, Green_LEDs);
+ALTERA_UP_AVALON_PARALLEL_PORT_INSTANCE ( HEX3_HEX0, HEX3_HEX0);
+ALTERA_UP_AVALON_PARALLEL_PORT_INSTANCE ( HEX7_HEX4, HEX7_HEX4);
+ALTERA_UP_AVALON_PARALLEL_PORT_INSTANCE ( PUSHBUTTONS, Pushbuttons);
+ALTERA_UP_AVALON_PARALLEL_PORT_INSTANCE ( RED_LEDS, Red_LEDs);
+ALTERA_UP_AVALON_PARALLEL_PORT_INSTANCE ( SLIDER_SWITCHES, Slider_switches);
+ALTERA_UP_AVALON_RS232_INSTANCE ( SERIAL_PORT, Serial_port);
 
 /*
  * Initialize the interrupt controller devices
@@ -96,4 +107,13 @@ void alt_sys_init( void )
     ALTERA_AVALON_TIMER_INIT ( INTERVAL_TIMER, Interval_timer);
     ALTERA_AVALON_JTAG_UART_INIT ( JTAG_UART, JTAG_UART);
     ALTERA_AVALON_SYSID_INIT ( SYSID, sysid);
+    ALTERA_UP_AVALON_PARALLEL_PORT_INIT ( EXPANSION_JP1, Expansion_JP1);
+    ALTERA_UP_AVALON_PARALLEL_PORT_INIT ( EXPANSION_JP2, Expansion_JP2);
+    ALTERA_UP_AVALON_PARALLEL_PORT_INIT ( GREEN_LEDS, Green_LEDs);
+    ALTERA_UP_AVALON_PARALLEL_PORT_INIT ( HEX3_HEX0, HEX3_HEX0);
+    ALTERA_UP_AVALON_PARALLEL_PORT_INIT ( HEX7_HEX4, HEX7_HEX4);
+    ALTERA_UP_AVALON_PARALLEL_PORT_INIT ( PUSHBUTTONS, Pushbuttons);
+    ALTERA_UP_AVALON_PARALLEL_PORT_INIT ( RED_LEDS, Red_LEDs);
+    ALTERA_UP_AVALON_PARALLEL_PORT_INIT ( SLIDER_SWITCHES, Slider_switches);
+    ALTERA_UP_AVALON_RS232_INIT ( SERIAL_PORT, Serial_port);
 }

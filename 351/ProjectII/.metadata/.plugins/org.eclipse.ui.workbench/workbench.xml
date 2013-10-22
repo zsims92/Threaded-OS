@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="24" version="2.0">
+<workbench progressCount="15" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="50" y="50">
 <fastViewData fastViewLocation="1024"/>
@@ -13,46 +13,47 @@
 <coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="167" y="22"/>
 <coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="89" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.make.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.ui.editor.asm.AsmEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page aggregateWorkingSetId="Aggregate for window 1382142991071" focus="true" label="Workspace - Nios II">
+<page aggregateWorkingSetId="Aggregate for window 1382142991071" focus="true" label="Workspace - Nios II Debug">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 <part id="2"/>
-<part id="0"/>
 <part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Main.h" partName="Main.h" path="D:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/Main.h" title="Main.h" tooltip="OSThread/Main.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OSThread/Main.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="382" selectionTopPixel="0"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Main.h" partName="Main.h" title="Main.h" tooltip="C:\351\ProjectII\DE2_NIOS-II\DE2_NIOS-II\software\OSThread\Main.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/C:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/Main.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="339" selectionTopPixel="204"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="scheduler_asm.s" partName="scheduler_asm.s" path="D:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/Source/scheduler_asm.s" title="scheduler_asm.s" tooltip="OSThread/Source/scheduler_asm.s" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OSThread/Source/scheduler_asm.s"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="214" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="scheduler_asm.h" partName="scheduler_asm.h" path="D:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/scheduler_asm.h" title="scheduler_asm.h" tooltip="OSThread/scheduler_asm.h" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="scheduler_asm.h" partName="scheduler_asm.h" path="C:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/scheduler_asm.h" title="scheduler_asm.h" tooltip="OSThread/scheduler_asm.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OSThread/scheduler_asm.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="141" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="137" selectionTopPixel="3"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Main.c" partName="Main.c" path="D:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/Source/Main.c" title="Main.c" tooltip="OSThread/Source/Main.c" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="scheduler_asm.s" partName="scheduler_asm.s" path="C:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/Source/scheduler_asm.s" title="scheduler_asm.s" tooltip="OSThread/Source/scheduler_asm.s" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OSThread/Source/scheduler_asm.s"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="297" selectionTopPixel="187"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.c" partName="Main.c" path="C:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/Source/Main.c" title="Main.c" tooltip="OSThread/Source/Main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/OSThread/Source/Main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="928" selectionTopPixel="1225"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4528" selectionTopPixel="2822"/>
 </editor>
 </editors>
 <views>
@@ -98,10 +99,11 @@
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>&#x0A;<category IMemento.internal.id="Errors"/>
+<expanded>
 <category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
-<columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
+<columnWidths org.eclipse.ui.ide.locationField="64" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="124" org.eclipse.ui.ide.resourceField="94" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -117,7 +119,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.asm.AsmEditor" activePerspective="com.altera.sbtgui.ui.cPerspective">
+<perspectives activePart="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-0].1.0" activePerspective="com.altera.sbtgui.ui.debugPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
@@ -287,16 +289,16 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.33525407" ratioLeft="640" ratioRight="1269" relationship="2" relative="topLeft"/>
+<info part="org.eclipse.ui.editorss" ratio="0.28691393" ratioLeft="410" ratioRight="1019" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.6319742" ratioLeft="589" ratioRight="343" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
 <page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.ui.views.ProgressView" label="Progress"/>
-<page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-0].1.0" label="LabelNotFound"/>
+<page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-0].1.0" label="Nios II Console"/>
 <page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:*" label="LabelNotFound"/>
 <page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -306,6 +308,7 @@
 <part id="3"/>
 <part id="4"/>
 <part id="5"/>
+<part id="6"/>
 </presentation>
 </folder>
 </info>
@@ -387,15 +390,15 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.2306867" ratioLeft="215" ratioRight="717" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info part="org.eclipse.ui.editorss" ratio="0.28590426" ratioLeft="215" ratioRight="537" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
 <info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.7993714" ratioLeft="1526" ratioRight="383" relationship="2" relative="org.eclipse.ui.editorss">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@63e290" ratio="0.5264536" ratioLeft="1005" ratioRight="904" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.cdt.dsf.debug.ui.disassembly.view" appearance="2" expanded="2">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@63e290" ratio="0.4506648" ratioLeft="644" ratioRight="785" relationship="2" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.debug.ui.RegisterView" appearance="2" expanded="2">
 <page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="Disassembly"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="Registers"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -404,13 +407,14 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1a1eb2c" ratio="0.6834734" ratioLeft="488" ratioRight="226" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1a1eb2c" ratio="0.5262172" ratioLeft="281" ratioRight="253" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-0].1.0" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
-<page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-0].1.0" label="LabelNotFound"/>
+<page content="com.altera.sbtgui.launch.hardware.ByteStreamConsoleView:USB-Blaster on localhost [USB-0].1.0" label="Nios II Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
@@ -436,166 +440,160 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/OSThread/Source/Main.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" path="/OSThread/Source/scheduler_asm.s"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" path="/OS_Thread_bsp/HAL/src/alt_exception_entry.S"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/OS_Thread_bsp/HAL/src/alt_irq_handler.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" path="/OS_Thread_bsp/HAL/src/alt_irq_entry.S"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/OSThread/scheduler_asm.h"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" uri="file:/C:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/Main.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" path="/OS_Thread_bsp/HAL/src/crt0.S"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/OSThread/Source/Main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/OS_Thread_bsp/drivers/src/altera_avalon_jtag_uart_write.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/OSThread/scheduler_asm.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/OSThread/Main.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/OSThread/Main.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/OSThread/scheduler_asm.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" path="/OSThread/Source/scheduler_asm.s"/>
 </editors>
 <item historyLabel="Main.c" index="0">
-<position info="not_deleted" x="1692" y="0"/>
+<position info="not_deleted" x="578" y="0"/>
+</item>
+<item historyLabel="scheduler_asm.h" index="2">
+<position info="not_deleted" x="137" y="0"/>
+</item>
+<item historyLabel="Main.h" index="3">
+<position info="not_deleted" x="387" y="0"/>
 </item>
 <item historyLabel="Main.c" index="0">
-<position info="not_deleted" x="2084" y="0"/>
+<position info="not_deleted" x="578" y="0"/>
 </item>
 <item historyLabel="Main.c" index="0">
-<position info="not_deleted" x="2129" y="0"/>
+<position info="not_deleted" x="4564" y="0"/>
 </item>
 <item historyLabel="Main.c" index="0">
-<position info="not_deleted" x="2246" y="0"/>
+<position info="not_deleted" x="4562" y="0"/>
 </item>
-<item historyLabel="scheduler_asm.s" index="1">
-<position info="not_deleted" x="347" y="0"/>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="516" y="0"/>
 </item>
-<item historyLabel="scheduler_asm.s" index="1">
-<position info="not_deleted" x="365" y="0"/>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4068" y="0"/>
 </item>
-<item historyLabel="scheduler_asm.s" index="1">
-<position info="not_deleted" x="383" y="0"/>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4078" y="0"/>
 </item>
-<item historyLabel="scheduler_asm.s" index="1">
-<position info="not_deleted" x="401" y="0"/>
+<item historyLabel="Main.h" index="3">
+<position info="not_deleted" x="339" y="0"/>
 </item>
-<item historyLabel="scheduler_asm.s" index="1">
-<position info="not_deleted" x="419" y="0"/>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4564" y="0"/>
 </item>
-<item historyLabel="scheduler_asm.s" index="1">
-<position info="not_deleted" x="437" y="0"/>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4078" y="0"/>
 </item>
-<item historyLabel="scheduler_asm.s" index="1">
-<position info="not_deleted" x="455" y="0"/>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4540" y="0"/>
 </item>
-<item historyLabel="alt_exception_entry.S" index="2">
+<item historyLabel="crt0.S" index="4">
 <position/>
 </item>
-<item historyLabel="alt_irq_handler.c" index="3">
-<position info="not_deleted" x="4093" y="0"/>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4560" y="0"/>
 </item>
-<item historyLabel="alt_irq_handler.c" index="3">
-<position info="not_deleted" x="6550" y="0"/>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4074" y="0"/>
 </item>
-<item historyLabel="alt_irq_entry.S" index="4">
-<position info="not_deleted" x="4483" y="0"/>
+<item historyLabel="crt0.S" index="4">
+<position/>
 </item>
-<item historyLabel="scheduler_asm.s" index="1">
-<position info="not_deleted" x="105" y="0"/>
-</item>
-<item historyLabel="scheduler_asm.s" index="1">
-<position info="not_deleted" x="130" y="0"/>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4074" y="0"/>
 </item>
 <item historyLabel="scheduler_asm.s" index="1">
-<position info="not_deleted" x="148" y="0"/>
+<position info="not_deleted" x="297" y="0"/>
 </item>
-<item historyLabel="alt_exception_entry.S" index="2">
-<position info="not_deleted" x="12773" y="0"/>
+<item historyLabel="scheduler_asm.h" index="2">
+<position info="not_deleted" x="137" y="0"/>
+</item>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4074" y="0"/>
+</item>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4507" y="0"/>
+</item>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4560" y="0"/>
+</item>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4074" y="0"/>
+</item>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4507" y="0"/>
+</item>
+<item historyLabel="crt0.S" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4562" y="0"/>
+</item>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4076" y="0"/>
+</item>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4066" y="8"/>
+</item>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4509" y="0"/>
 </item>
 <item historyLabel="scheduler_asm.s" index="1">
-<position info="not_deleted" x="148" y="0"/>
+<position info="not_deleted" x="297" y="0"/>
 </item>
-<item historyLabel="Main.c" index="5">
-<position info="not_deleted" x="1000" y="0"/>
+<item historyLabel="crt0.S" index="4">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Main.c" index="5">
-<position info="not_deleted" x="3318" y="0"/>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4562" y="0"/>
 </item>
-<item historyLabel="Main.c" index="5">
-<position info="not_deleted" x="930" y="0"/>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4542" y="0"/>
 </item>
-<item historyLabel="Main.c" index="5">
-<position info="not_deleted" x="2060" y="0"/>
+<item historyLabel="Main.h" index="3">
+<position info="not_deleted" x="339" y="0"/>
 </item>
-<item historyLabel="altera_avalon_jtag_uart_write.c" index="6">
-<position info="not_deleted" x="7209" y="0"/>
-</item>
-<item historyLabel="scheduler_asm.h" index="7">
+<item historyLabel="scheduler_asm.h" index="2">
 <position info="not_deleted" x="137" y="0"/>
 </item>
 <item historyLabel="scheduler_asm.s" index="1">
-<position info="not_deleted" x="148" y="0"/>
+<position info="not_deleted" x="297" y="0"/>
 </item>
-<item historyLabel="altera_avalon_jtag_uart_write.c" index="6">
-<position info="not_deleted" x="6967" y="0"/>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4542" y="0"/>
+</item>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4538" y="0"/>
+</item>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4562" y="0"/>
+</item>
+<item historyLabel="Main.c" index="0">
+<position info="not_deleted" x="4509" y="0"/>
+</item>
+<item historyLabel="Main.h" index="3">
+<position info="not_deleted" x="339" y="0"/>
 </item>
 <item historyLabel="scheduler_asm.s" index="1">
-<position info="not_deleted" x="148" y="0"/>
+<position info="not_deleted" x="297" y="0"/>
 </item>
-<item historyLabel="scheduler_asm.h" index="7">
+<item historyLabel="scheduler_asm.h" index="2">
 <position info="not_deleted" x="137" y="0"/>
 </item>
-<item historyLabel="Main.h" index="8">
-<position info="not_deleted" x="382" y="0"/>
+<item historyLabel="Main.c" index="5">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 <item historyLabel="Main.c" index="5">
-<position info="not_deleted" x="2060" y="0"/>
+<position info="not_deleted" x="4562" y="0"/>
 </item>
 <item historyLabel="Main.c" index="5">
-<position info="not_deleted" x="2741" y="0"/>
+<position info="not_deleted" x="4509" y="0"/>
 </item>
 <item historyLabel="Main.c" index="5">
-<position info="not_deleted" x="3318" y="0"/>
+<position info="not_deleted" x="3370" y="0"/>
 </item>
 <item historyLabel="Main.c" index="5">
-<position info="not_deleted" x="3104" y="0"/>
+<position info="not_deleted" x="4581" y="0"/>
 </item>
-<item historyLabel="Main.h" index="8">
-<position info="not_deleted" x="312" y="0"/>
-</item>
-<item historyLabel="Main.c" index="5">
-<position info="not_deleted" x="3318" y="0"/>
-</item>
-<item historyLabel="Main.c" index="5">
-<position info="not_deleted" x="3285" y="0"/>
-</item>
-<item historyLabel="Main.h" index="8">
-<position info="not_deleted" x="312" y="0"/>
-</item>
-<item historyLabel="Main.c" index="5">
-<position info="not_deleted" x="3287" y="0"/>
-</item>
-<item historyLabel="Main.h" index="8">
-<position info="not_deleted" x="312" y="0"/>
-</item>
-<item historyLabel="Main.c" index="5">
-<position info="not_deleted" x="3318" y="0"/>
-</item>
-<item historyLabel="scheduler_asm.h" index="7">
-<position info="not_deleted" x="137" y="0"/>
-</item>
-<item historyLabel="Main.h" index="8">
-<position info="not_deleted" x="311" y="1"/>
-</item>
-<item historyLabel="Main.c" index="5">
-<position info="not_deleted" x="3318" y="0"/>
-</item>
-<item historyLabel="Main.h" index="9">
-<position info="not_deleted" x="311" y="1"/>
-</item>
-<item historyLabel="scheduler_asm.h" index="10">
-<position info="not_deleted" x="137" y="0"/>
-</item>
-<item historyLabel="scheduler_asm.s" index="11">
-<position info="not_deleted" x="148" y="0"/>
-</item>
-<item historyLabel="scheduler_asm.h" index="10">
-<position info="not_deleted" x="141" y="0"/>
-</item>
-<item active="true" historyLabel="scheduler_asm.s" index="11">
-<position info="not_deleted" x="148" y="0"/>
+<item active="true" historyLabel="Main.c" index="5">
+<position info="not_deleted" x="4528" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -614,14 +612,32 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="altera_avalon_jtag_uart_write.c" tooltip="OS_Thread_bsp/drivers/src/altera_avalon_jtag_uart_write.c">
-<persistable path="/OS_Thread_bsp/drivers/src/altera_avalon_jtag_uart_write.c"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.c" tooltip="OSThread/Source/Main.c">
 <persistable path="/OSThread/Source/Main.c"/>
 </file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="crt0.S" tooltip="OS_Thread_bsp/HAL/src/crt0.S">
+<persistable path="/OS_Thread_bsp/HAL/src/crt0.S"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="alt_exception_entry.S" tooltip="OS_Thread_bsp/HAL/src/alt_exception_entry.S">
 <persistable path="/OS_Thread_bsp/HAL/src/alt_exception_entry.S"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="settings.bsp" tooltip="OS_Thread_bsp/settings.bsp">
+<persistable path="/OS_Thread_bsp/settings.bsp"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.make.editor" name="public.mk" tooltip="C:\351\ProjectII\DE2_NIOS-II\DE2_NIOS-II\software\hal_bsp\public.mk">
+<persistable uri="file:/C:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/hal_bsp/public.mk"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="scheduler_asm.s" tooltip="OSThread/Source/scheduler_asm.s">
+<persistable path="/OSThread/Source/scheduler_asm.s"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="scheduler_asm.h" tooltip="OSThread/scheduler_asm.h">
+<persistable path="/OSThread/scheduler_asm.h"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.h" tooltip="C:\351\ProjectII\DE2_NIOS-II\DE2_NIOS-II\software\OSThread\Main.h">
+<persistable uri="file:/C:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OSThread/Main.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="altera_avalon_jtag_uart_write.c" tooltip="OS_Thread_bsp/drivers/src/altera_avalon_jtag_uart_write.c">
+<persistable path="/OS_Thread_bsp/drivers/src/altera_avalon_jtag_uart_write.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="alt_irq_entry.S" tooltip="OS_Thread_bsp/HAL/src/alt_irq_entry.S">
 <persistable path="/OS_Thread_bsp/HAL/src/alt_irq_entry.S"/>
@@ -629,29 +645,14 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="alt_irq_handler.c" tooltip="OS_Thread_bsp/HAL/src/alt_irq_handler.c">
 <persistable path="/OS_Thread_bsp/HAL/src/alt_irq_handler.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="crt0.S" tooltip="OS_Thread_bsp/HAL/src/crt0.S">
-<persistable path="/OS_Thread_bsp/HAL/src/crt0.S"/>
-</file>
 <file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="puts.c" tooltip="C:\altera\11.0sp1\nios2eds\bin\gnu\src\newlib-1.16\newlib\libc\stdio\puts.c">
 <persistable path="C:\altera\11.0sp1\nios2eds\bin\gnu\src\newlib-1.16\newlib\libc\stdio\puts.c" project="OSThread"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="scheduler_asm.h" tooltip="OSThread/scheduler_asm.h">
-<persistable path="/OSThread/scheduler_asm.h"/>
 </file>
 <file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="_types.h" tooltip="C:\altera\11.0sp1\quartus\bin\cygwin\usr\include\sys\_types.h">
 <persistable path="C:\altera\11.0sp1\quartus\bin\cygwin\usr\include\sys\_types.h" project="OSThread"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.make.editor" name="Makefile" tooltip="OSThread/Makefile">
 <persistable path="/OSThread/Makefile"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.asm.AsmEditor" name="myTheadSced.asm" tooltip="OSThread/Source/myTheadSced.asm">
-<persistable path="/OSThread/Source/myTheadSced.asm"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.h" tooltip="OSThread/Main.h">
-<persistable path="/OSThread/Main.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Main.c" tooltip="OSThread/Main.c">
-<persistable path="/OSThread/Main.c"/>
 </file>
 </mruList>
 </workbench>
