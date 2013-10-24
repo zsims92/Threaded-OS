@@ -10,9 +10,6 @@
 #include "alt_types.h"
 #include "../main.h"
 
-
-int first = 1;
-int y = 0;
 TCB threads[NUM_THREADS];
 TCB* currThread = NULL;
 
@@ -25,6 +22,78 @@ void mythread(int thread_id){
 		printf("This is message %d of thread #%d.\n", i, thread_id);
 		for (j = 0; j < MAX; j++);
 	}
+}
+
+void mythread_scheduler(param_list){
+	DISABLE_INTERRUPTS();
+	int i, threadID = -1;
+	for(i=0; i<NUM_THREADS; i++){
+		if(threads[i].status == READY || threads[i].status == RUNNING){
+			threadID = i;
+			break;
+		}
+	}
+
+	if(threadID != -1)
+		currThread = &threads[threadID];
+	else{
+		currThread = NULL;
+	}
+
+	if(runnable_threads > 0){
+		if(currThread->status == READY){
+			//Load address of destroy function
+			int x;
+			asm("movia %0, destroy": "=r"(x));
+			currThread->status = RUNNING;
+			//Save original context on stack
+			asm("mov %0, r17": "=r"(currThread->stack[0]));
+			asm("mov %0, r4": "=r"(currThread->stack[1]));
+			asm("mov %0, r5": "=r"(currThread->stack[2]));
+			asm("mov %0, r6": "=r"(currThread->stack[3]));
+			asm("mov %0, r7": "=r"(currThread->stack[4]));
+			asm("mov %0, r8": "=r"(currThread->stack[5]));
+			asm("mov %0, r9": "=r"(currThread->stack[6]));
+
+			//Load context of new thread
+			asm("mov r9, %0": "=r"(i): "r"(currThread->context[0]));
+			asm("mov r4, %0": "=r"(i): "r"(currThread->context[1]));
+			asm("mov r5, %0": "=r"(i): "r"(currThread->context[2]));
+			asm("mov r6, %0": "=r"(i): "r"(currThread->context[3]));
+			asm("mov r7, %0": "=r"(i): "r"(currThread->context[4]));
+			asm("mov r8, %0": "=r"(i): "r"(currThread->context[5]));
+			asm("mov r10, %0": "=r"(i): "r"(x));
+		}
+		else if(currThread->status == RUNNING){
+			//Save Context
+			asm("mov %0, r9": "=r"(currThread->context[0]));
+			asm("mov %0, r4": "=r"(currThread->context[1]));
+			asm("mov %0, r5": "=r"(currThread->context[2]));
+			asm("mov %0, r6": "=r"(currThread->context[3]));
+			asm("mov %0, r7": "=r"(currThread->context[4]));
+			asm("mov %0, r8": "=r"(currThread->context[5]));
+			int dc;
+			int x;
+			asm("movia %0, destroy": "=r"(x));
+			//Load Context
+			asm("mov r9, %0": "=r"(dc): "r"(currThread->context[0]));
+			asm("mov r4, %0": "=r"(dc): "r"(currThread->context[1]));
+			asm("mov r5, %0": "=r"(dc): "r"(currThread->context[2]));
+			asm("mov r6, %0": "=r"(dc): "r"(currThread->context[3]));
+			asm("mov r7, %0": "=r"(dc): "r"(currThread->context[4]));
+			asm("mov r8, %0": "=r"(dc): "r"(currThread->context[5]));
+			//asm("mov r10, %0": "=r"(dc): "r"(x));
+		}
+	}
+	else{
+		 printf("Interrupted by the DE2 timer!\n");
+	}
+	ENABLE_INTERRUPTS();
+}
+
+alt_u32 mythread_handler (void * param_list){
+	global_flag = 1;
+	return ALARMTICKS(35); //Using the defined function above
 }
 
 void newTCB(TCB* tcb, int i){
@@ -45,107 +114,36 @@ void mythread_join(int i){
 	threads[i].status = READY;
 }
 
-void mythread_scheduler(param_list){
-	DISABLE_INTERRUPTS();
-	if(currThread == NULL  && runnable_threads){
-		//Choose current thread
-		int i;
-		for(i=0; i<NUM_THREADS; i++){
-			if(threads[i].status == READY)
-				break;
-		}
-		currThread = &threads[i];
-		
-		//Load address of destroy function
-		int x;
-		asm("movia %0, destroy": "=r"(x));
-		
-		//Save original context on stack
-		asm("mov %0, r17": "=r"(currThread->stack[0]));
-		asm("mov %0, r4": "=r"(currThread->stack[1]));
-		asm("mov %0, r5": "=r"(currThread->stack[2]));
-		asm("mov %0, r6": "=r"(currThread->stack[3]));
-		asm("mov %0, r7": "=r"(currThread->stack[4]));
-		asm("mov %0, r8": "=r"(currThread->stack[5]));
-		asm("mov %0, r9": "=r"(currThread->stack[6]));
-
-				
-		
-		//Load context of new thread
-		asm("mov r9, %0": "=r"(i): "r"(currThread->context[0]));
-		asm("mov r4, %0": "=r"(i): "r"(currThread->context[1]));
-		asm("mov r5, %0": "=r"(i): "r"(currThread->context[2]));
-		asm("mov r6, %0": "=r"(i): "r"(currThread->context[3]));
-		asm("mov r7, %0": "=r"(i): "r"(currThread->context[4]));
-		asm("mov r8, %0": "=r"(i): "r"(currThread->context[5]));
-		asm("mov r10, %0": "=r"(i): "r"(x));
-	}
-	else if(runnable_threads){
-		//Save Context
-		asm("mov %0, r9": "=r"(currThread->context[0]));
-		asm("mov %0, r4": "=r"(currThread->context[1]));
-		asm("mov %0, r5": "=r"(currThread->context[2]));
-		asm("mov %0, r6": "=r"(currThread->context[3]));
-		asm("mov %0, r7": "=r"(currThread->context[4]));
-		asm("mov %0, r8": "=r"(currThread->context[5]));
-		int dc;
-		int x;
-		asm("movia %0, destroy": "=r"(x));
-		//Load Context
-		asm("mov r9, %0": "=r"(dc): "r"(currThread->context[0]));
-		asm("mov r4, %0": "=r"(dc): "r"(currThread->context[1]));
-		asm("mov r5, %0": "=r"(dc): "r"(currThread->context[2]));
-		asm("mov r6, %0": "=r"(dc): "r"(currThread->context[3]));
-		asm("mov r7, %0": "=r"(dc): "r"(currThread->context[4]));
-		asm("mov r8, %0": "=r"(dc): "r"(currThread->context[5]));
-		//asm("mov r10, %0": "=r"(dc): "r"(x));
-	}
-	ENABLE_INTERRUPTS();
-}
-
-alt_u32 mythread_handler (void * param_list){
-	if(runnable_threads)
-		global_flag = 1;
-	else
-		global_flag = 0;
-	printf("Interruption %d\n", global_flag);
-	return ALARMTICKS(35); //Using the defined function above
-}
-
-
-
 void mythread_create(int i){
 	TCB tcb;
 	newTCB(&tcb, i);
 	threads[i] = tcb;
+	threads[i].status = DONE;
 }
 
 void destroy(){
 	printf("In destroy function\n");
 	int dc;
 
+	asm("mov r12, %0": "=r"(dc): "r"(currThread->stack[0]));
+	asm("stw r12, 8(sp)");
 	asm("mov r4, %0": "=r"(dc): "r"(currThread->stack[1]));
 	asm("mov r5, %0": "=r"(dc): "r"(currThread->stack[2]));
 	asm("mov r6, %0": "=r"(dc): "r"(currThread->stack[3]));
 	asm("mov r7, %0": "=r"(dc): "r"(currThread->stack[4]));
 	asm("mov r8, %0": "=r"(dc): "r"(currThread->stack[5]));
 	asm("mov r9, %0": "=r"(dc): "r"(currThread->stack[6]));
-	asm("mov r12, %0": "=r"(dc): "r"(currThread->stack[0]));
-	asm("stw r12, 8(sp)");
-	
+
+	runnable_threads -= 1;
 	currThread->status = DONE;
 	free(currThread->context);
 	free(currThread->stack);
-	currThread = NULL;
 	asm("mov r2, r4");
 	asm("mov r3, r5");
 	asm("mov r4, r6");
 	asm("mov r5, r7");
 	asm("mov r6, r8");
 	asm("mov r7, r9");
-
-	runnable_threads -= 1;
-	return;
 }
 
 void prototype_os(param_list)

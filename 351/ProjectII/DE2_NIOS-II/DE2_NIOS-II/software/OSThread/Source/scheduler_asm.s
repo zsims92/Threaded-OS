@@ -5,7 +5,7 @@ _MyThread:
 	movia	r10, global_flag
 	ldw		r11, (r10)
 	beq		r11, r0, _Skip
-	movia r10, 0
+	stw		r0, (r10)
 	ldw r4,12(sp)
 	ldw r5,16(sp)
 	ldw r6,20(sp)
