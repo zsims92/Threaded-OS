@@ -2,9 +2,9 @@
  * system.h - SOPC Builder system and BSP software package information
  *
  * Machine generated for CPU 'CPU' in SOPC Builder design 'nios_system'
- * SOPC Builder design path: C:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/nios_system.sopcinfo
+ * SOPC Builder design path: D:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/nios_system.sopcinfo
  *
- * Generated: Tue Oct 22 13:09:48 CDT 2013
+ * Generated: Fri Oct 18 19:43:11 CDT 2013
  */
 
 /*
@@ -392,8 +392,8 @@
  */
 
 #define ALT_DEVICE_FAMILY "CYCLONEII"
+#define ALT_ENHANCED_INTERRUPT_API_PRESENT
 #define ALT_IRQ_BASE NULL
-#define ALT_LEGACY_INTERRUPT_API_PRESENT
 #define ALT_LOG_PORT "/dev/null"
 #define ALT_LOG_PORT_BASE 0x0
 #define ALT_LOG_PORT_DEV null

@@ -4,9 +4,6 @@
 <scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.461762785;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.461762785.;cdt.managedbuild.tool.gnu.cpp.compiler.cygwin.base.288574390;cdt.managedbuild.tool.gnu.cpp.compiler.input.cygwin.1048345231">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="C:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OS_Thread_bsp/HAL/inc"/>
-<includePath path="C:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OS_Thread_bsp/"/>
-<includePath path="C:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OS_Thread_bsp/drivers/inc"/>
 <includePath path="D:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OS_Thread_bsp/HAL/inc"/>
 <includePath path="D:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OS_Thread_bsp/"/>
 <includePath path="D:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OS_Thread_bsp/drivers/inc"/>
@@ -109,9 +106,6 @@
 </instance>
 <instance id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.461762785;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.461762785.;cdt.managedbuild.tool.gnu.c.compiler.cygwin.base.115044698;cdt.managedbuild.tool.gnu.c.compiler.input.cygwin.1930096000">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="C:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OS_Thread_bsp/HAL/inc"/>
-<includePath path="C:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OS_Thread_bsp/"/>
-<includePath path="C:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OS_Thread_bsp/drivers/inc"/>
 <includePath path="D:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OS_Thread_bsp/HAL/inc"/>
 <includePath path="D:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OS_Thread_bsp/"/>
 <includePath path="D:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/software/OS_Thread_bsp/drivers/inc"/>

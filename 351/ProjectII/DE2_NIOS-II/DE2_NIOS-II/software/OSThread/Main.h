@@ -35,5 +35,6 @@ typedef struct{
 	int* stack;
 	int* context;  //Should be 7 registers
 } TCB;
+void destroy();
 
 #endif /* MAIN_H_ */

@@ -101,7 +101,7 @@ ACDS_VERSION := 11.0sp1
 # BUILD_NUMBER: 208
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := C:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/nios_system.sopcinfo
+SOPC_FILE := D:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/nios_system.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS
@@ -270,13 +270,6 @@ altera_nios2_hal_driver_ASM_LIB_SRCS := \
 	$(altera_nios2_hal_driver_SRCS_ROOT)/src/alt_log_macro.S \
 	$(altera_nios2_hal_driver_SRCS_ROOT)/src/crt0.S
 
-# avalon_parallel_port_driver sources root 
-avalon_parallel_port_driver_SRCS_ROOT := drivers
-
-# avalon_parallel_port_driver sources 
-avalon_parallel_port_driver_C_LIB_SRCS := \
-	$(avalon_parallel_port_driver_SRCS_ROOT)/src/altera_up_avalon_parallel_port.c
-
 # hal sources root 
 hal_SRCS_ROOT := HAL
 
@@ -335,13 +328,6 @@ hal_C_LIB_SRCS := \
 	$(hal_SRCS_ROOT)/src/alt_wait.c \
 	$(hal_SRCS_ROOT)/src/alt_write.c
 
-# up_avalon_rs232_driver sources root 
-up_avalon_rs232_driver_SRCS_ROOT := drivers
-
-# up_avalon_rs232_driver sources 
-up_avalon_rs232_driver_C_LIB_SRCS := \
-	$(up_avalon_rs232_driver_SRCS_ROOT)/src/altera_up_avalon_rs232.c
-
 
 # Assemble all component C source files 
 COMPONENT_C_LIB_SRCS += \
@@ -349,9 +335,7 @@ COMPONENT_C_LIB_SRCS += \
 	$(altera_avalon_sysid_driver_C_LIB_SRCS) \
 	$(altera_avalon_timer_driver_C_LIB_SRCS) \
 	$(altera_nios2_hal_driver_C_LIB_SRCS) \
-	$(avalon_parallel_port_driver_C_LIB_SRCS) \
-	$(hal_C_LIB_SRCS) \
-	$(up_avalon_rs232_driver_C_LIB_SRCS)
+	$(hal_C_LIB_SRCS)
 
 # Assemble all component assembly source files 
 COMPONENT_ASM_LIB_SRCS += \

@@ -2,7 +2,7 @@
  * Main.c
  *
  *  Created on: Oct 18, 2013
- *      Author: Zach
+ *      Author: Zach Sims and Elliot Mitchell
  */
 #include <stdio.h>
 #include <malloc.h>
@@ -27,26 +27,33 @@ void mythread(int thread_id){
 void mythread_scheduler(param_list){
 	DISABLE_INTERRUPTS();
 	int i, threadID = -1;
+	//This determines which thread to run or which thread is running
+	//Uses a basic FIFO thread order
 	for(i=0; i<NUM_THREADS; i++){
 		if(threads[i].status == READY || threads[i].status == RUNNING){
 			threadID = i;
 			break;
 		}
 	}
-
+	//If a thread is available to run or is running,
+	//we set the current thread pointer to that thread
 	if(threadID != -1)
 		currThread = &threads[threadID];
-	else{
+	else
 		currThread = NULL;
-	}
 
+	//If there are threads to be ran
 	if(runnable_threads > 0){
+		//If this is the first time a thread will start
 		if(currThread->status == READY){
 			//Load address of destroy function
-			int x;
-			asm("movia %0, destroy": "=r"(x));
+			int x = (int) destroy;
+
+			//Set the currThread to running
 			currThread->status = RUNNING;
+
 			//Save original context on stack
+			//This is the context of the main function
 			asm("mov %0, r17": "=r"(currThread->stack[0]));
 			asm("mov %0, r4": "=r"(currThread->stack[1]));
 			asm("mov %0, r5": "=r"(currThread->stack[2]));
@@ -64,28 +71,10 @@ void mythread_scheduler(param_list){
 			asm("mov r8, %0": "=r"(i): "r"(currThread->context[5]));
 			asm("mov r10, %0": "=r"(i): "r"(x));
 		}
-		else if(currThread->status == RUNNING){
-			//Save Context
-			asm("mov %0, r9": "=r"(currThread->context[0]));
-			asm("mov %0, r4": "=r"(currThread->context[1]));
-			asm("mov %0, r5": "=r"(currThread->context[2]));
-			asm("mov %0, r6": "=r"(currThread->context[3]));
-			asm("mov %0, r7": "=r"(currThread->context[4]));
-			asm("mov %0, r8": "=r"(currThread->context[5]));
-			int dc;
-			int x;
-			asm("movia %0, destroy": "=r"(x));
-			//Load Context
-			asm("mov r9, %0": "=r"(dc): "r"(currThread->context[0]));
-			asm("mov r4, %0": "=r"(dc): "r"(currThread->context[1]));
-			asm("mov r5, %0": "=r"(dc): "r"(currThread->context[2]));
-			asm("mov r6, %0": "=r"(dc): "r"(currThread->context[3]));
-			asm("mov r7, %0": "=r"(dc): "r"(currThread->context[4]));
-			asm("mov r8, %0": "=r"(dc): "r"(currThread->context[5]));
-			//asm("mov r10, %0": "=r"(dc): "r"(x));
-		}
+		//If a thread is already running, we do not need to change
+		//the context of the stack at all.
 	}
-	else{
+	else{//There are no mor threads to run
 		 printf("Interrupted by the DE2 timer!\n");
 	}
 	ENABLE_INTERRUPTS();
@@ -97,53 +86,64 @@ alt_u32 mythread_handler (void * param_list){
 }
 
 void newTCB(TCB* tcb, int i){
-	int x = 0;
-	asm("movia %0, mythread": "=r"(x));
+	//Determing the addres of mythread
+	//So the context of new thread can
+	//be changed to start at mythread
+	int x = (int)mythread;
+	//Create a context to hold the context
+	//of the thread
 	tcb->context = malloc(sizeof(int) * 6);
+	//Create a stack to hold the context
+	//of the prototype_os()
 	tcb->stack = malloc(sizeof(int) * 7);
 	tcb->context[0] = x;
-	tcb->context[1] = 0;
-	tcb->context[2] = 0;
 	tcb->context[3] = i;
-	tcb->context[4] = 0;
-	tcb->context[5] = 0;
 }
 
 void mythread_join(int i){
+	//Tell the scheduler that a thread is available
 	runnable_threads++;
+	//Set that thread to ready
 	threads[i].status = READY;
 }
 
 void mythread_create(int i){
+	//Creates a new thread with
+	//the given ID
 	TCB tcb;
 	newTCB(&tcb, i);
 	threads[i] = tcb;
+	//Sets the thread off until
+	//mythread_join is used
+	//on this thread
 	threads[i].status = DONE;
 }
-
+/*
+ * This function will clean up the current TCB and
+ * then return to the original function unless it
+ * get interrupted.  It alerts the user that the program
+ * is here first.  It then loads the context of the
+ * prototype_os here to return to it until another interrupt
+ * Finally it free the context and stack of the currentTCB
+ * and turns the thread off *
+ * */
 void destroy(){
 	printf("In destroy function\n");
 	int dc;
 
 	asm("mov r12, %0": "=r"(dc): "r"(currThread->stack[0]));
 	asm("stw r12, 8(sp)");
-	asm("mov r4, %0": "=r"(dc): "r"(currThread->stack[1]));
-	asm("mov r5, %0": "=r"(dc): "r"(currThread->stack[2]));
-	asm("mov r6, %0": "=r"(dc): "r"(currThread->stack[3]));
-	asm("mov r7, %0": "=r"(dc): "r"(currThread->stack[4]));
-	asm("mov r8, %0": "=r"(dc): "r"(currThread->stack[5]));
-	asm("mov r9, %0": "=r"(dc): "r"(currThread->stack[6]));
+	asm("mov r2, %0": "=r"(dc): "r"(currThread->stack[1]));
+	asm("mov r3, %0": "=r"(dc): "r"(currThread->stack[2]));
+	asm("mov r4, %0": "=r"(dc): "r"(currThread->stack[3]));
+	asm("mov r5, %0": "=r"(dc): "r"(currThread->stack[4]));
+	asm("mov r6, %0": "=r"(dc): "r"(currThread->stack[5]));
+	asm("mov r7, %0": "=r"(dc): "r"(currThread->stack[6]));
 
 	runnable_threads -= 1;
 	currThread->status = DONE;
 	free(currThread->context);
 	free(currThread->stack);
-	asm("mov r2, r4");
-	asm("mov r3, r5");
-	asm("mov r4, r6");
-	asm("mov r5, r7");
-	asm("mov r6, r8");
-	asm("mov r7, r9");
 }
 
 void prototype_os(param_list)
