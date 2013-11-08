@@ -1,0 +1,28 @@
+.include "scheduler_asm.h"
+.section .exceptions.exit.user, "xa"
+#This code will:
+#	1. Check if an interrupt occured
+#	2. If not, then continue as normal
+#	3. Else it will load the context of the interrupting
+#	   thread into r4-r9, and the ra into r17
+#	4. It will then call mythread_scheduler
+#	5. After returning, it will store the values or r4-r9
+#	   back on the sp.  If a new thread was started then
+#	   the values with be different.  Else they will stay
+#	   the same.
+
+_MyThread:
+	movia	r10, global_flag
+	ldw		r11, (r10)
+	beq		r11, r0, _Skip
+	stw		r0, (r10)
+
+	add		r4, r0, sp
+	add		r5, r0, fp
+	call 	mythread_scheduler
+	mov		fp, r5;
+	mov		sp, r4;
+	#addi	sp, sp, 76
+
+
+_Skip:

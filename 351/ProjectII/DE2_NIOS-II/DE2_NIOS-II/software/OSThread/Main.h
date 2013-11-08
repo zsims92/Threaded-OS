@@ -26,15 +26,24 @@ typedef enum{
 	READY=1,
 	RUNNING,
 	DONE,
-	PAUSE
 } THREAD_STATUS;
 
 typedef struct{
 	int id;
 	THREAD_STATUS status;
-	int* stack;
-	int* context;  //Should be 7 registers
+	int* sp;
+	int* fp;
+	int* context;
 } TCB;
+
 void destroy();
+void mythread(int thread_id);
+void mythread_scheduler(int sp, int fp);
+alt_u32 mythread_handler (void * param_list);
+void newTCB(TCB* tcb, int i);
+void mythread_join(int i);
+void mythread_create(int i);
+void destroy();
+void prototype_os();
 
 #endif /* MAIN_H_ */

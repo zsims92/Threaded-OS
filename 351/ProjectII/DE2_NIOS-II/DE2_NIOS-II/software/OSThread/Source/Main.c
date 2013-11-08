@@ -12,6 +12,9 @@
 
 TCB threads[NUM_THREADS];
 TCB* currThread = NULL;
+int* mainSP;
+int* mainFP;
+int first = 1;
 
 void mythread(int thread_id){
 	// The declaration of j as an integer was added on 10/24/2011
@@ -24,55 +27,39 @@ void mythread(int thread_id){
 	}
 }
 
-void mythread_scheduler(param_list){
+void mythread_scheduler(int sp, int fp){
 	DISABLE_INTERRUPTS();
-	int i, threadID = -1;
+	int dc;
+	if(first){
+		mainSP = (int)sp;
+		mainFP = (int)fp;
+		first = 0;
+	}
+	else{
+		currThread->sp = (int)sp;
+		currThread->fp = (int)fp;
+	}
+
+	int id;
 	//This determines which thread to run or which thread is running
 	//Uses a basic FIFO thread order
-	for(i=0; i<NUM_THREADS; i++){
-		if(threads[i].status == READY || threads[i].status == RUNNING){
-			threadID = i;
-			break;
+	if(runnable_threads > 0){
+		if(currThread == NULL){
+			id = 0;
 		}
+		else{
+			id = currThread->id;
+			id = (id + 1) % NUM_THREADS;
+			while(currThread->status == DONE){
+				id = (id + 1) % NUM_THREADS;
+			}
+		}
+		currThread = &threads[id];
 	}
-	//If a thread is available to run or is running,
-	//we set the current thread pointer to that thread
-	if(threadID != -1)
-		currThread = &threads[threadID];
-	else
-		currThread = NULL;
-
 	//If there are threads to be ran
 	if(runnable_threads > 0){
-		//If this is the first time a thread will start
-		if(currThread->status == READY){
-			//Load address of destroy function
-			int x = (int) destroy;
-
-			//Set the currThread to running
-			currThread->status = RUNNING;
-
-			//Save original context on stack
-			//This is the context of the main function
-			asm("mov %0, r17": "=r"(currThread->stack[0]));
-			asm("mov %0, r4": "=r"(currThread->stack[1]));
-			asm("mov %0, r5": "=r"(currThread->stack[2]));
-			asm("mov %0, r6": "=r"(currThread->stack[3]));
-			asm("mov %0, r7": "=r"(currThread->stack[4]));
-			asm("mov %0, r8": "=r"(currThread->stack[5]));
-			asm("mov %0, r9": "=r"(currThread->stack[6]));
-
-			//Load context of new thread
-			asm("mov r9, %0": "=r"(i): "r"(currThread->context[0]));
-			asm("mov r4, %0": "=r"(i): "r"(currThread->context[1]));
-			asm("mov r5, %0": "=r"(i): "r"(currThread->context[2]));
-			asm("mov r6, %0": "=r"(i): "r"(currThread->context[3]));
-			asm("mov r7, %0": "=r"(i): "r"(currThread->context[4]));
-			asm("mov r8, %0": "=r"(i): "r"(currThread->context[5]));
-			asm("mov r10, %0": "=r"(i): "r"(x));
-		}
-		//If a thread is already running, we do not need to change
-		//the context of the stack at all.
+		 asm("add r4, r0, %0": "=r"(dc): "r"(currThread->sp));
+		 asm("add r5, r0, %0": "=r"(dc): "r"(currThread->fp));
 	}
 	else{//There are no mor threads to run
 		 printf("Interrupted by the DE2 timer!\n");
@@ -90,14 +77,18 @@ void newTCB(TCB* tcb, int i){
 	//So the context of new thread can
 	//be changed to start at mythread
 	int x = (int)mythread;
+	int y = (int)destroy;
 	//Create a context to hold the context
 	//of the thread
-	tcb->context = malloc(sizeof(int) * 6);
+	tcb->context = malloc(sizeof(int) * 40);
 	//Create a stack to hold the context
 	//of the prototype_os()
-	tcb->stack = malloc(sizeof(int) * 7);
-	tcb->context[0] = x;
-	tcb->context[3] = i;
+	tcb->context[20] = y;
+	tcb->context[25] = i;
+	tcb->context[38] = x;
+	tcb->sp = &tcb->context[39];
+	tcb->fp = &tcb->context[39];
+	printf("%d %d %d\n", &tcb->context[21], tcb->sp, tcb->fp);
 }
 
 void mythread_join(int i){
@@ -129,24 +120,13 @@ void mythread_create(int i){
  * */
 void destroy(){
 	printf("In destroy function\n");
-	int dc;
-
-	asm("mov r12, %0": "=r"(dc): "r"(currThread->stack[0]));
-	asm("stw r12, 8(sp)");
-	asm("mov r2, %0": "=r"(dc): "r"(currThread->stack[1]));
-	asm("mov r3, %0": "=r"(dc): "r"(currThread->stack[2]));
-	asm("mov r4, %0": "=r"(dc): "r"(currThread->stack[3]));
-	asm("mov r5, %0": "=r"(dc): "r"(currThread->stack[4]));
-	asm("mov r6, %0": "=r"(dc): "r"(currThread->stack[5]));
-	asm("mov r7, %0": "=r"(dc): "r"(currThread->stack[6]));
 
 	runnable_threads -= 1;
 	currThread->status = DONE;
 	free(currThread->context);
-	free(currThread->stack);
 }
 
-void prototype_os(param_list)
+void prototype_os()
 {
 	int i;
 	for(i=0; i<NUM_THREADS; i++){

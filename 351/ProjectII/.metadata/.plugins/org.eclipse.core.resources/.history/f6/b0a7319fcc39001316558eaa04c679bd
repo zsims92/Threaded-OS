@@ -1,9 +1,0 @@
-.section .exceptions.exit.user, "xa"
-
-.global _MyThread
-.extern global_flag
-
-addi	r15, r15, 0
-stw		r15, global_flag
-call mythread
-sds

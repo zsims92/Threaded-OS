@@ -101,7 +101,7 @@ ACDS_VERSION := 11.0sp1
 # BUILD_NUMBER: 208
 
 SETTINGS_FILE := settings.bsp
-SOPC_FILE := D:/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/nios_system.sopcinfo
+SOPC_FILE := D:/OSKernels/351/ProjectII/DE2_NIOS-II/DE2_NIOS-II/nios_system.sopcinfo
 
 #-------------------------------------------------------------------------------
 #                             TOOL & COMMAND DEFINITIONS

@@ -16,21 +16,17 @@ _MyThread:
 	ldw		r11, (r10)
 	beq		r11, r0, _Skip
 	stw		r0, (r10)
-	ldw r4,12(sp)
-	ldw r5,16(sp)
-	ldw r6,20(sp)
-	ldw r7,24(sp)
-	ldw r8,28(sp)
-	ldw	r9,72(sp)
-	ldw	r17,0(sp)
-	call 	mythread_scheduler
 
-	stw 	r4, 12(sp)
-	stw 	r5, 16(sp)
-	stw 	r6, 20(sp)
-	stw 	r7, 24(sp)
-	stw		r8, 28(sp)
-	stw 	r9, 72(sp)
-	stw		r10, 0(sp)
+	add		r4, r0, sp
+	add		r5, r0, fp
+	call 	mythread_scheduler
+	mov		fp, r5;
+	mov		sp, r4;
+	ldw		r4, 0(sp)
+	stw		r4, 0(sp)
+	nop
+	nop
+	#addi	sp, sp, 76
+
 
 _Skip:
